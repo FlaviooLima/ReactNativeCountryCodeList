@@ -6,13 +6,13 @@ import {
   TouchableOpacity,
   LayoutAnimation
 } from 'react-native';
-import {getAlphabet} from './data'
+import { getAlphabet } from './data'
 import AlphabetListView from 'react-native-alphabetlistview'
 import Search from 'react-native-search-box';
 import PropTypes from 'prop-types';
 
 class CountryCodeList extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props)
     this.renderCell = this.renderCell.bind(this)
     this.renderSectionItem = this.renderSectionItem.bind(this)
@@ -26,10 +26,10 @@ class CountryCodeList extends React.Component {
     }
   }
 
-  render(){
+  render() {
     let data = this.filterData()
     return (
-      <View style={styles.container}>
+      <View style={[styles.container, this.props.containerStyle]}>
         <Search
           afterCancel={this.clearQuery}
           afterDelete={this.clearQuery}
@@ -54,15 +54,15 @@ class CountryCodeList extends React.Component {
     )
   }
 
-  filterData(){
+  filterData() {
     try {
       let data = JSON.parse(JSON.stringify(this.state.data))
-      Object.keys(data).map((key)=>{
+      Object.keys(data).map((key) => {
         data[key] = data[key].filter((el) => {
           return el.name.toLowerCase().includes(this.state.query.toLowerCase()) || el.code.includes(this.state.query)
         })
         if (data[key].length === 0) {
-          delete(data[key])
+          delete (data[key])
         }
       })
       return data
@@ -71,15 +71,15 @@ class CountryCodeList extends React.Component {
     }
   }
 
-  clearQuery(){
-    this.setState({query: ''})
+  clearQuery() {
+    this.setState({ query: '' })
   }
 
-  onSearch(query){
-    this.setState({query})
+  onSearch(query) {
+    this.setState({ query })
   }
 
-  renderSectionHeader(rowData){
+  renderSectionHeader(rowData) {
     if (this.props.renderSectionHeader) {
       return this.props.renderSectionHeader(rowData)
     }
@@ -87,14 +87,14 @@ class CountryCodeList extends React.Component {
       <View style={[
         styles.sectionHeader,
         this.props.sectionHeaderStyle,
-        {backgroundColor: this.props.headerBackground,height: this.props.sectionHeaderHeight - 1}
+        { backgroundColor: this.props.headerBackground, height: this.props.sectionHeaderHeight - 1 }
       ]}>
         <Text style={[styles.sectionHeaderText, this.props.sectionHeaderTextStyle]}>{rowData.title}</Text>
       </View>
     )
   }
 
-  renderSectionItem(rowData){
+  renderSectionItem(rowData) {
     if (this.props.renderSectionItem) {
       return this.props.renderSectionItem(rowData)
     }
@@ -103,19 +103,19 @@ class CountryCodeList extends React.Component {
     )
   }
 
-  renderCell(rowData){
+  renderCell(rowData) {
     if (this.props.renderCell) {
       return this.props.renderCell(rowData)
     }
     return (
       <View>
         <TouchableOpacity
-          onPress={()=>{this.props.onClickCell(rowData.item)}}
-          style={[styles.cell, this.props.cellStyle, {height: this.props.cellHeight - 0.5}]}>
+          onPress={() => { this.props.onClickCell(rowData.item) }}
+          style={[styles.cell, this.props.cellStyle, { height: this.props.cellHeight - 0.5 }]}>
           <Text numberOfLines={1} style={[styles.cellTitle, this.props.cellTitleStyle]}>{rowData.item.name}</Text>
           <Text style={[styles.cellLabel, this.props.cellLabelStyle]}>{rowData.item.code}</Text>
         </TouchableOpacity>
-        <View style={styles.separator}/>
+        <View style={styles.separator} />
       </View>
     )
   }
@@ -188,13 +188,15 @@ CountryCodeList.propTypes = {
   cellStyle: PropTypes.any,
   cellTitleStyle: PropTypes.any,
   cellLabelStyle: PropTypes.any,
+  containerStyle: PropTypes.any,
 };
 
 CountryCodeList.defaultProps = {
   headerBackground: 'rgb(245, 245, 245)',
   cellHeight: 44.5,
   sectionHeaderHeight: 30,
-  onClickCell: () => {}
+  containerStyle: { backgroundColor: 'white' },
+  onClickCell: () => { }
 };
 
 module.exports = CountryCodeList;
