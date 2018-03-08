@@ -48,6 +48,7 @@ class CountryCodeList extends React.Component {
           sectionHeader={this.renderSectionHeader}
           cellHeight={this.props.cellHeight}
           sectionHeaderHeight={this.props.sectionHeaderHeight}
+          sectionListStyle={this.props.sectionListStyle}
           {...this.props.alphabetListProps}
         />
       </View>
