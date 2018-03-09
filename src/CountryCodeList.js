@@ -4,21 +4,19 @@ import {
   Text,
   StyleSheet,
   TouchableOpacity,
-  LayoutAnimation
+  LayoutAnimation,
+  SectionList
 } from 'react-native';
 import { getAlphabet } from './data'
-import AlphabetListView from 'react-native-alphabetlistview'
+import CountrySectionList from './CountrySectionList';
 import Search from 'react-native-search-box';
 import PropTypes from 'prop-types';
 
 class CountryCodeList extends React.Component {
   constructor(props) {
     super(props)
-    this.renderCell = this.renderCell.bind(this)
-    this.renderSectionItem = this.renderSectionItem.bind(this)
-    this.renderSectionHeader = this.renderSectionHeader.bind(this)
-    this.onSearch = this.onSearch.bind(this)
-    this.clearQuery = this.clearQuery.bind(this)
+    this.onSearch = this.onSearch.bind(this);
+    this.clearQuery = this.clearQuery.bind(this);
 
     this.state = {
       data: this.props.data ? this.props.data : getAlphabet(),
@@ -40,33 +38,30 @@ class CountryCodeList extends React.Component {
           inputStyle={styles.searchInput}
           {...this.props.searchProps}
         />
-        <AlphabetListView
-          enableEmptySections={true}
+        <CountrySectionList
           data={data}
-          cell={this.renderCell}
-          sectionListItem={this.renderSectionItem}
-          sectionHeader={this.renderSectionHeader}
-          cellHeight={this.props.cellHeight}
-          sectionHeaderHeight={this.props.sectionHeaderHeight}
-          sectionListStyle={this.props.sectionListStyle}
-          {...this.props.alphabetListProps}
+          onPress={this.props.onPress}
         />
+      
       </View>
     )
   }
 
   filterData() {
     try {
-      let data = JSON.parse(JSON.stringify(this.state.data))
-      Object.keys(data).map((key) => {
-        data[key] = data[key].filter((el) => {
-          return el.name.toLowerCase().includes(this.state.query.toLowerCase()) || el.code.includes(this.state.query)
-        })
-        if (data[key].length === 0) {
-          delete (data[key])
-        }
-      })
-      return data
+      var arrayAux = [];
+
+      this.state.data.map((data) => {
+
+        var auxArrayCoutry = [];
+        data.data.map((country) => {
+          if (country.name.search(this.state.query) >= 0) { auxArrayCoutry.push(country); }
+        });
+
+        if (auxArrayCoutry.length) { arrayAux.push({ title: data.title, data: auxArrayCoutry }); }
+      });
+
+      return arrayAux;
     } catch (e) {
       return this.state.data
     }

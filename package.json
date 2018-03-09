@@ -1,12 +1,76 @@
 {
-  "name": "react-native-country-code-list",
-  "version": "1.0.8",
-  "description": "Country code list with alphabet navigation for Android/IOS to use with react-native",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ElekenAgency/ReactNativeCountryCodeList.git"
+  "_args": [
+    [
+      {
+        "raw": "git@https://github.com/FlaviooLima/ReactNativeCountryCodeList.git",
+        "scope": null,
+        "escapedName": "git",
+        "name": "git",
+        "rawSpec": "https://github.com/FlaviooLima/ReactNativeCountryCodeList.git",
+        "spec": "git+https://github.com/FlaviooLima/ReactNativeCountryCodeList.git",
+        "type": "hosted",
+        "hosted": {
+          "type": "github",
+          "ssh": "git@github.com:FlaviooLima/ReactNativeCountryCodeList.git",
+          "sshUrl": "git+ssh://git@github.com/FlaviooLima/ReactNativeCountryCodeList.git",
+          "httpsUrl": "git+https://github.com/FlaviooLima/ReactNativeCountryCodeList.git",
+          "gitUrl": "git://github.com/FlaviooLima/ReactNativeCountryCodeList.git",
+          "shortcut": "github:FlaviooLima/ReactNativeCountryCodeList",
+          "directUrl": "https://raw.githubusercontent.com/FlaviooLima/ReactNativeCountryCodeList/master/package.json"
+        }
+      },
+      "/Users/macmini/reactNative/spark"
+    ]
+  ],
+  "_from": "git+https://github.com/FlaviooLima/ReactNativeCountryCodeList.git",
+  "_id": "react-native-country-code-list@1.0.8",
+  "_inCache": true,
+  "_location": "/react-native-country-code-list",
+  "_phantomChildren": {
+    "prop-types": "15.6.0"
   },
+  "_requested": {
+    "raw": "git@https://github.com/FlaviooLima/ReactNativeCountryCodeList.git",
+    "scope": null,
+    "escapedName": "git",
+    "name": "git",
+    "rawSpec": "https://github.com/FlaviooLima/ReactNativeCountryCodeList.git",
+    "spec": "git+https://github.com/FlaviooLima/ReactNativeCountryCodeList.git",
+    "type": "hosted",
+    "hosted": {
+      "type": "github",
+      "ssh": "git@github.com:FlaviooLima/ReactNativeCountryCodeList.git",
+      "sshUrl": "git+ssh://git@github.com/FlaviooLima/ReactNativeCountryCodeList.git",
+      "httpsUrl": "git+https://github.com/FlaviooLima/ReactNativeCountryCodeList.git",
+      "gitUrl": "git://github.com/FlaviooLima/ReactNativeCountryCodeList.git",
+      "shortcut": "github:FlaviooLima/ReactNativeCountryCodeList",
+      "directUrl": "https://raw.githubusercontent.com/FlaviooLima/ReactNativeCountryCodeList/master/package.json"
+    }
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/FlaviooLima/ReactNativeCountryCodeList.git#5298a9a348af8d170219d202183e09a667135f46",
+  "_shasum": "01dc9e872b4c5c4193eb1e8ea330c5019be801d5",
+  "_shrinkwrap": null,
+  "_spec": "git@https://github.com/FlaviooLima/ReactNativeCountryCodeList.git",
+  "_where": "/Users/macmini/reactNative/spark",
+  "author": {
+    "name": "Artem Kosiakevych",
+    "email": "artem.kosiakevych@eleken.co"
+  },
+  "bugs": {
+    "url": "https://github.com/ElekenAgency/ReactNativeCountryCodeList/issues"
+  },
+  "dependencies": {
+    "react-native-section-list-get-item-layout": "^2.2.2",
+    "react-native-search-box": "git+https://github.com/ElekenAgency/react-native-search-box.git"
+  },
+  "description": "Country code list with alphabet navigation for Android/IOS to use with react-native",
+  "devDependencies": {},
+  "gitHead": "5298a9a348af8d170219d202183e09a667135f46",
+  "homepage": "https://github.com/ElekenAgency/ReactNativeCountryCodeList",
   "keywords": [
     "react-component",
     "react-native",
@@ -14,18 +78,19 @@
     "react-native-countries-code-list",
     "react-native-countries-code"
   ],
-  "author": "Artem Kosiakevych <artem.kosiakevych@eleken.co>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ElekenAgency/ReactNativeCountryCodeList/issues"
+  "main": "index.js",
+  "name": "react-native-country-code-list",
+  "optionalDependencies": {},
+  "readme": "# ReactNativeCountryCodeList\nCountry code list with alphabet navigation\n[![npm version](http://img.shields.io/npm/v/react-native-country-code-list.svg?style=flat-square)](https://npmjs.org/package/react-native-country-code-list \"View this project on npm\")\n[![npm version](http://img.shields.io/npm/dm/react-native-country-code-list.svg?style=flat-square)](https://npmjs.org/package/react-native-country-code-list \"View this project on npm\")\n\nCountry code list with alphabet navigation for Android/IOS to use with react-native,\nbased on `react-native-alphabetlistview`, also using `react-native-search-box`\n\n## Installation\n1. `npm install react-native-country-code-list --save` or\n   `yarn add react-native-country-code-list`\n\n## Demo\n\n![](./src/countryCodeList.gif)\n\n# Usage\n\n```js\n\nimport CountryCodeList from 'react-native-country-code-list'\n\nclass CountryCodeListApp extends React.Component {\n    render() {\n      return (\n        <CountryCodeList\n\t  onClickCell={(cellObject) => console.log(cellObject)}\n\t  />\n      );\n    }\n\n```\n\n## Props\nAll props are optional\n\nNote if you will pass custom data as a list you also must provide `renderCell`, `renderSectionHeader`, `renderSectionItem` functions and search action.\n\n| Prop  | Default  | Type | Description |\n| :------------ |:---------------:| :---------------:| :-----|\n| data | country code list object | `object` | Custom list data |\n| alphabetListProps | undefined | `object` | `react-native-alphabetlistview` props |\n| searchProps | undefined | `object` | `react-native-search-box` props |\n| onClickCell | () => {} | `func` | Callback onClick list item |\n| headerBackground | rgb(245, 245, 245) | `any` | background for headers and search wrapper |\n| cellHeight | 44.5 | `number` | Cell height |\n| sectionHeaderHeight | 30 | `number` | Section header height |\n| renderCell | func | `func` | Custom Cell component |\n| renderSectionItem | func | `func` | Custom Section Item (Alphabet) component |\n| renderSectionHeader | func | `func` | Custom Section header component |\n| sectionHeaderStyle | style | `any` | style section header |\n| sectionHeaderTextStyle | style | `any` | style section header text |\n| sectionItemTextStyle | style | `any` | style section item text |\n| cellStyle | style | `any` | style list item |\n| cellTitleStyle | style | `any` | style list item title |\n| cellLabelStyle | style | `any` | style list item right label|\n\n\n## Questions or suggestions?\n\nFeel free to [open an issue](https://github.com/ElekenAgency/ReactNativeCountryCodeList/issues)\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ElekenAgency/ReactNativeCountryCodeList.git"
   },
-  "homepage": "https://github.com/ElekenAgency/ReactNativeCountryCodeList",
   "scripts": {
     "fix": "eslint --fix",
     "lint": "eslint ."
   },
-  "dependencies": {
-    "react-native-alphabetlistview": "git+https://github.com/FlaviooLima/react-native-alphabetlistview.git",
-    "react-native-search-box": "git+https://github.com/ElekenAgency/react-native-search-box.git"
-  }
+  "version": "1.0.8"
 }
