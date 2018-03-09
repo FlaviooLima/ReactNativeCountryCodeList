@@ -20,21 +20,40 @@
         }
       },
       "/Users/macmini/reactNative/spark"
+    ],
+    [
+      {
+        "raw": "git+https://github.com/FlaviooLima/ReactNativeCountryCodeList",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "git+https://github.com/FlaviooLima/ReactNativeCountryCodeList",
+        "spec": "git+https://github.com/FlaviooLima/ReactNativeCountryCodeList.git",
+        "type": "hosted",
+        "hosted": {
+          "type": "github",
+          "ssh": "git@github.com:FlaviooLima/ReactNativeCountryCodeList.git",
+          "sshUrl": "git+ssh://git@github.com/FlaviooLima/ReactNativeCountryCodeList.git",
+          "httpsUrl": "git+https://github.com/FlaviooLima/ReactNativeCountryCodeList.git",
+          "gitUrl": "git://github.com/FlaviooLima/ReactNativeCountryCodeList.git",
+          "shortcut": "github:FlaviooLima/ReactNativeCountryCodeList",
+          "directUrl": "https://raw.githubusercontent.com/FlaviooLima/ReactNativeCountryCodeList/master/package.json"
+        }
+      },
+      "/Users/macmini/reactNative/spark"
     ]
   ],
   "_from": "git+https://github.com/FlaviooLima/ReactNativeCountryCodeList.git",
   "_id": "react-native-country-code-list@1.0.8",
   "_inCache": true,
   "_location": "/react-native-country-code-list",
-  "_phantomChildren": {
-    "prop-types": "15.6.0"
-  },
+  "_phantomChildren": {},
   "_requested": {
-    "raw": "git@https://github.com/FlaviooLima/ReactNativeCountryCodeList.git",
+    "raw": "git+https://github.com/FlaviooLima/ReactNativeCountryCodeList",
     "scope": null,
-    "escapedName": "git",
-    "name": "git",
-    "rawSpec": "https://github.com/FlaviooLima/ReactNativeCountryCodeList.git",
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "git+https://github.com/FlaviooLima/ReactNativeCountryCodeList",
     "spec": "git+https://github.com/FlaviooLima/ReactNativeCountryCodeList.git",
     "type": "hosted",
     "hosted": {
@@ -51,10 +70,10 @@
     "#USER",
     "/"
   ],
-  "_resolved": "git+https://github.com/FlaviooLima/ReactNativeCountryCodeList.git#5298a9a348af8d170219d202183e09a667135f46",
-  "_shasum": "01dc9e872b4c5c4193eb1e8ea330c5019be801d5",
+  "_resolved": "git+https://github.com/FlaviooLima/ReactNativeCountryCodeList.git#25ac08a76e82e884001d043c92a1f2ecd79a1834",
+  "_shasum": "fded8c41065dc9272d66574ac38aa36c07cc3d34",
   "_shrinkwrap": null,
-  "_spec": "git@https://github.com/FlaviooLima/ReactNativeCountryCodeList.git",
+  "_spec": "git+https://github.com/FlaviooLima/ReactNativeCountryCodeList",
   "_where": "/Users/macmini/reactNative/spark",
   "author": {
     "name": "Artem Kosiakevych",
@@ -64,8 +83,8 @@
     "url": "https://github.com/ElekenAgency/ReactNativeCountryCodeList/issues"
   },
   "dependencies": {
-    "react-native-section-list-get-item-layout": "^2.2.2",
-    "react-native-search-box": "git+https://github.com/ElekenAgency/react-native-search-box.git"
+    "react-native-search-box": "git+https://github.com/ElekenAgency/react-native-search-box.git",
+    "react-native-section-list-get-item-layout": "^2.2.2"
   },
   "description": "Country code list with alphabet navigation for Android/IOS to use with react-native",
   "devDependencies": {},

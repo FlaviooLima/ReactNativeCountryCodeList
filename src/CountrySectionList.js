@@ -91,7 +91,7 @@ class AlphabetList extends React.PureComponent {
 
    render() {
       return (
-         <View ref="view" style={{ position: 'absolute', right: 0, top: 0, bottom: 0, alignItems: 'center', justifyContent: 'center', width: 30, }}
+         <View ref="view" style={{ position: 'absolute', right: 0, top: 0, bottom: 0, alignItems: 'center', justifyContent: 'center', width: 30, backgroundColor: 'transparent' }}
             onStartShouldSetResponder={() => true}
             onMoveShouldSetResponder={() => true}
             onResponderGrant={this.detectAndScrollToSection}
