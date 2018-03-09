@@ -22,6 +22,17 @@ class CountryCodeList extends React.Component {
       data: this.props.data ? this.props.data : getAlphabet(),
       query: ''
     }
+
+    this.props.navigator.setOnNavigatorEvent(this.onNavigatorEvent);
+  }
+
+  onNavigatorEvent = (event) => {
+    if (event.type == 'NavBarButtonPress') {
+      if (event.id == 'cancelModalCountry') {
+        this.props.navigator.dismissModal();
+        return true;
+      }
+    }
   }
 
   render() {
@@ -42,7 +53,7 @@ class CountryCodeList extends React.Component {
           data={data}
           onPress={this.props.onPress}
         />
-      
+
       </View>
     )
   }
