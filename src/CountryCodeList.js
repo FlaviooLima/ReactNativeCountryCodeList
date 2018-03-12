@@ -5,11 +5,11 @@ import {
   StyleSheet,
   TouchableOpacity,
   LayoutAnimation,
-  SectionList
+  SectionList,
+  TextInput
 } from 'react-native';
 import { getAlphabet } from './data'
 import CountrySectionList from './CountrySectionList';
-import Search from 'react-native-search-box';
 import PropTypes from 'prop-types';
 
 class CountryCodeList extends React.Component {
@@ -38,20 +38,17 @@ class CountryCodeList extends React.Component {
   render() {
     let data = this.filterData()
     return (
-      <View style={[styles.container, this.props.containerStyle]}>
-        <Search
-          afterCancel={this.clearQuery}
-          afterDelete={this.clearQuery}
+      <View style={[styles.container, this.props.containerStyle, { backgroundColor: this.props.headerBackground }]}>
+        <TextInput
+          placeholder="Buscar"
+          style={{ height: 30, margin: 10, paddingLeft: 10, paddingTop: 5, paddingBottom: 5, paddingRight: 20, borderColor: '#444', backgroundColor: 'white', borderRadius: 5, fontSize: 13 }}
+          value={this.state.text}
           onChangeText={this.props.onSearch ? this.props.onSearch : this.onSearch}
-          backgroundColor={this.props.headerBackground}
-          titleCancelColor={'rgb(0, 0, 0)'}
-          tintColorSearch={'rgb(0, 0, 0)'}
-          inputStyle={styles.searchInput}
-          {...this.props.searchProps}
         />
         <CountrySectionList
           data={data}
           onPress={this.props.onPress}
+          testID={this.props.testID}
         />
 
       </View>

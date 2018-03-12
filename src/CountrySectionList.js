@@ -28,6 +28,7 @@ export default class CountrySectionList extends React.PureComponent {
       return (
          <View style={{ flex: 1, flexDirection: 'row' }}>
             <SectionList
+               testID={this.props.testID}
                ref={component => this._listView = component}
                style={{ flex: 1, }}
                sections={this.props.data}

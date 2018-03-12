@@ -83,7 +83,6 @@
     "url": "https://github.com/ElekenAgency/ReactNativeCountryCodeList/issues"
   },
   "dependencies": {
-    "react-native-search-box": "git+https://github.com/ElekenAgency/react-native-search-box.git",
     "react-native-section-list-get-item-layout": "^2.2.2"
   },
   "description": "Country code list with alphabet navigation for Android/IOS to use with react-native",
