@@ -45,35 +45,27 @@
   ],
   "_from": "git+https://github.com/FlaviooLima/ReactNativeCountryCodeList.git",
   "_id": "react-native-country-code-list@1.0.8",
+  "_inBundle": false,
   "_inCache": true,
   "_location": "/react-native-country-code-list",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "git+https://github.com/FlaviooLima/ReactNativeCountryCodeList",
-    "scope": null,
-    "escapedName": null,
-    "name": null,
-    "rawSpec": "git+https://github.com/FlaviooLima/ReactNativeCountryCodeList",
-    "spec": "git+https://github.com/FlaviooLima/ReactNativeCountryCodeList.git",
-    "type": "hosted",
-    "hosted": {
-      "type": "github",
-      "ssh": "git@github.com:FlaviooLima/ReactNativeCountryCodeList.git",
-      "sshUrl": "git+ssh://git@github.com/FlaviooLima/ReactNativeCountryCodeList.git",
-      "httpsUrl": "git+https://github.com/FlaviooLima/ReactNativeCountryCodeList.git",
-      "gitUrl": "git://github.com/FlaviooLima/ReactNativeCountryCodeList.git",
-      "shortcut": "github:FlaviooLima/ReactNativeCountryCodeList",
-      "directUrl": "https://raw.githubusercontent.com/FlaviooLima/ReactNativeCountryCodeList/master/package.json"
-    }
+    "type": "git",
+    "raw": "react-native-country-code-list@git+https://github.com/FlaviooLima/ReactNativeCountryCodeList.git",
+    "name": "react-native-country-code-list",
+    "escapedName": "react-native-country-code-list",
+    "rawSpec": "git+https://github.com/FlaviooLima/ReactNativeCountryCodeList.git",
+    "saveSpec": "git+https://github.com/FlaviooLima/ReactNativeCountryCodeList.git",
+    "fetchSpec": "https://github.com/FlaviooLima/ReactNativeCountryCodeList.git",
+    "gitCommittish": null
   },
   "_requiredBy": [
-    "#USER",
     "/"
   ],
-  "_resolved": "git+https://github.com/FlaviooLima/ReactNativeCountryCodeList.git#25ac08a76e82e884001d043c92a1f2ecd79a1834",
+  "_resolved": "git+https://github.com/FlaviooLima/ReactNativeCountryCodeList.git#b87351c4ca2c39c197c4f1a325697cb6d3993e21",
   "_shasum": "fded8c41065dc9272d66574ac38aa36c07cc3d34",
   "_shrinkwrap": null,
-  "_spec": "git+https://github.com/FlaviooLima/ReactNativeCountryCodeList",
+  "_spec": "react-native-country-code-list@git+https://github.com/FlaviooLima/ReactNativeCountryCodeList.git",
   "_where": "/Users/macmini/reactNative/spark",
   "author": {
     "name": "Artem Kosiakevych",
@@ -82,9 +74,11 @@
   "bugs": {
     "url": "https://github.com/ElekenAgency/ReactNativeCountryCodeList/issues"
   },
+  "bundleDependencies": false,
   "dependencies": {
     "react-native-section-list-get-item-layout": "^2.2.2"
   },
+  "deprecated": false,
   "description": "Country code list with alphabet navigation for Android/IOS to use with react-native",
   "devDependencies": {},
   "gitHead": "5298a9a348af8d170219d202183e09a667135f46",
@@ -100,8 +94,6 @@
   "main": "index.js",
   "name": "react-native-country-code-list",
   "optionalDependencies": {},
-  "readme": "# ReactNativeCountryCodeList\nCountry code list with alphabet navigation\n[![npm version](http://img.shields.io/npm/v/react-native-country-code-list.svg?style=flat-square)](https://npmjs.org/package/react-native-country-code-list \"View this project on npm\")\n[![npm version](http://img.shields.io/npm/dm/react-native-country-code-list.svg?style=flat-square)](https://npmjs.org/package/react-native-country-code-list \"View this project on npm\")\n\nCountry code list with alphabet navigation for Android/IOS to use with react-native,\nbased on `react-native-alphabetlistview`, also using `react-native-search-box`\n\n## Installation\n1. `npm install react-native-country-code-list --save` or\n   `yarn add react-native-country-code-list`\n\n## Demo\n\n![](./src/countryCodeList.gif)\n\n# Usage\n\n```js\n\nimport CountryCodeList from 'react-native-country-code-list'\n\nclass CountryCodeListApp extends React.Component {\n    render() {\n      return (\n        <CountryCodeList\n\t  onClickCell={(cellObject) => console.log(cellObject)}\n\t  />\n      );\n    }\n\n```\n\n## Props\nAll props are optional\n\nNote if you will pass custom data as a list you also must provide `renderCell`, `renderSectionHeader`, `renderSectionItem` functions and search action.\n\n| Prop  | Default  | Type | Description |\n| :------------ |:---------------:| :---------------:| :-----|\n| data | country code list object | `object` | Custom list data |\n| alphabetListProps | undefined | `object` | `react-native-alphabetlistview` props |\n| searchProps | undefined | `object` | `react-native-search-box` props |\n| onClickCell | () => {} | `func` | Callback onClick list item |\n| headerBackground | rgb(245, 245, 245) | `any` | background for headers and search wrapper |\n| cellHeight | 44.5 | `number` | Cell height |\n| sectionHeaderHeight | 30 | `number` | Section header height |\n| renderCell | func | `func` | Custom Cell component |\n| renderSectionItem | func | `func` | Custom Section Item (Alphabet) component |\n| renderSectionHeader | func | `func` | Custom Section header component |\n| sectionHeaderStyle | style | `any` | style section header |\n| sectionHeaderTextStyle | style | `any` | style section header text |\n| sectionItemTextStyle | style | `any` | style section item text |\n| cellStyle | style | `any` | style list item |\n| cellTitleStyle | style | `any` | style list item title |\n| cellLabelStyle | style | `any` | style list item right label|\n\n\n## Questions or suggestions?\n\nFeel free to [open an issue](https://github.com/ElekenAgency/ReactNativeCountryCodeList/issues)\n",
-  "readmeFilename": "README.md",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ElekenAgency/ReactNativeCountryCodeList.git"

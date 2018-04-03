@@ -67,10 +67,9 @@ class CountryItem extends React.PureComponent {
    render() {
       return (
          <Button
-            containerViewStyle={{ width: '100%', marginLeft: 0, height: 41, overflow: 'hidden' }}
+            buttonStyle={{ marginLeft: 0, height: 41, overflow: 'hidden', borderRadius: 0, borderBottomWidth: 1, borderColor: '#ececee', backgroundColor: 'white' }}
             onPress={this._onPress}
-            backgroundColor={"white"}
-            textStyle={{ fontSize: 14, textAlign: 'left', fontWeight: '400', color: "black", width: '100%', }}
+            titleStyle={{ fontSize: 14, textAlign: 'left', fontWeight: '400', color: "black", width: '100%', }}
             title={this.props.item.name}
          />
       );
